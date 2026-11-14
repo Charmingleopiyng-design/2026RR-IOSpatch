@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "sourceHost": "ns.rec.net",
+  "destinationHost": "ns.recflare.net",
+  "httpsOnly": true,
+  "preservePathAndQuery": true,
+  "tlsVerification": "system-default"
+}
