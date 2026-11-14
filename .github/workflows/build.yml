@@ -1,0 +1,45 @@
+name: Build RecNetRedirect iOS Framework
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: macos-15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check Xcode
+        run: xcodebuild -version
+
+      - name: Build ARM64 iOS framework
+        run: |
+          xcodebuild \
+            -project RecNetRedirect.xcodeproj \
+            -scheme RecNetRedirect \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            ARCHS=arm64 \
+            ONLY_ACTIVE_ARCH=NO \
+            BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+            CONFIGURATION_BUILD_DIR="$PWD/build" \
+            build
+
+      - name: Package framework
+        run: |
+          test -d build/RecNetRedirect.framework
+          cd build
+          zip -r "$GITHUB_WORKSPACE/RecNetRedirect-framework-arm64.zip" RecNetRedirect.framework
+
+      - name: Upload framework
+        uses: actions/upload-artifact@v4
+        with:
+          name: RecNetRedirect-framework-arm64
+          path: RecNetRedirect-framework-arm64.zip
+          if-no-files-found: error  
