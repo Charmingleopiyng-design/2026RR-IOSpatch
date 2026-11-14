@@ -1,4 +1,5 @@
-// !$*UTF8*$!
+
+ // !$*UTF8*$!
 {
   archiveVersion = 1;
   classes = {};
@@ -8,17 +9,61 @@
     A00000000000000000000002 = { isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RecNetRedirect.mm; sourceTree = "<group>"; };
     A00000000000000000000003 = { isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecNetRedirect.h; sourceTree = "<group>"; };
     A00000000000000000000004 = { isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+
     A00000000000000000000005 = { isa = PBXGroup; children = (A00000000000000000000002, A00000000000000000000003, A00000000000000000000004); path = RecNetRedirect; sourceTree = "<group>"; };
-    A00000000000000000000006 = { isa = PBXGroup; children = (A00000000000000000000005); sourceTree = "<group>"; };
-    A00000000000000000000007 = { isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RecNetRedirect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+    A00000000000000000000006 = { isa = PBXGroup; children = (A00000000000000000000005, A00000000000000000000008); sourceTree = "<group>"; };
+    A00000000000000000000007 = { isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RecNetRedirect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
     A00000000000000000000008 = { isa = PBXGroup; children = (A00000000000000000000007); name = Products; sourceTree = "<group>"; };
+
     A00000000000000000000009 = { isa = PBXNativeTarget; buildConfigurationList = A0000000000000000000000A; buildPhases = (A0000000000000000000000B, A0000000000000000000000C, A0000000000000000000000D); buildRules = (); dependencies = (); name = RecNetRedirect; productName = RecNetRedirect; productReference = A00000000000000000000007; productType = "com.apple.product-type.framework"; };
+
     A0000000000000000000000A = { isa = XCConfigurationList; buildConfigurations = (A0000000000000000000000E, A0000000000000000000000F); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
     A0000000000000000000000B = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000001); runOnlyForDeploymentPostprocessing = 0; };
     A0000000000000000000000C = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
     A0000000000000000000000D = { isa = PBXHeadersBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
-    A0000000000000000000000E = { isa = XCBuildConfiguration; buildSettings = { DEFINES_MODULE = YES; DYLIB_COMPATIBILITY_VERSION = 1; DYLIB_CURRENT_VERSION = 1; DYLIB_INSTALL_NAME_BASE = "@rpath"; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = RecNetRedirect/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 15.0; MACH_O_TYPE = mh_dylib; PRODUCT_BUNDLE_IDENTIFIER = net.recflare.RecNetRedirect; PRODUCT_NAME = RecNetRedirect; SDKROOT = iphoneos; SKIP_INSTALL = YES; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; } name = Debug; };
-    A0000000000000000000000F = { isa = XCBuildConfiguration; buildSettings = { DEFINES_MODULE = YES; DYLIB_COMPATIBILITY_VERSION = 1; DYLIB_CURRENT_VERSION = 1; DYLIB_INSTALL_NAME_BASE = "@rpath"; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = RecNetRedirect/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 15.0; MACH_O_TYPE = mh_dylib; PRODUCT_BUNDLE_IDENTIFIER = net.recflare.RecNetRedirect; PRODUCT_NAME = RecNetRedirect; SDKROOT = iphoneos; SKIP_INSTALL = YES; TARGETED_DEVICE_FAMILY = "1,2"; } name = Release; };
+
+    A0000000000000000000000E = {
+      isa = XCBuildConfiguration;
+      buildSettings = {
+        DEFINES_MODULE = YES;
+        DYLIB_COMPATIBILITY_VERSION = 1;
+        DYLIB_CURRENT_VERSION = 1;
+        DYLIB_INSTALL_NAME_BASE = "@rpath";
+        GENERATE_INFOPLIST_FILE = NO;
+        INFOPLIST_FILE = RecNetRedirect/Info.plist;
+        IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+        MACH_O_TYPE = mh_dylib;
+        PRODUCT_BUNDLE_IDENTIFIER = net.recflare.RecNetRedirect;
+        PRODUCT_NAME = RecNetRedirect;
+        SDKROOT = iphoneos;
+        SKIP_INSTALL = YES;
+        SWIFT_VERSION = 5.0;
+        TARGETED_DEVICE_FAMILY = "1,2";
+      };
+      name = Debug;
+    };
+
+    A0000000000000000000000F = {
+      isa = XCBuildConfiguration;
+      buildSettings = {
+        DEFINES_MODULE = YES;
+        DYLIB_COMPATIBILITY_VERSION = 1;
+        DYLIB_CURRENT_VERSION = 1;
+        DYLIB_INSTALL_NAME_BASE = "@rpath";
+        GENERATE_INFOPLIST_FILE = NO;
+        INFOPLIST_FILE = RecNetRedirect/Info.plist;
+        IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+        MACH_O_TYPE = mh_dylib;
+        PRODUCT_BUNDLE_IDENTIFIER = net.recflare.RecNetRedirect;
+        PRODUCT_NAME = RecNetRedirect;
+        SDKROOT = iphoneos;
+        SKIP_INSTALL = YES;
+        SWIFT_VERSION = 5.0;
+        TARGETED_DEVICE_FAMILY = "1,2";
+      };
+      name = Release;
+    };
+
     A00000000000000000000010 = { isa = PBXProject; attributes = { LastUpgradeCheck = 1600; }; buildConfigurationList = A00000000000000000000011; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; mainGroup = A00000000000000000000006; productRefGroup = A00000000000000000000008; projectDirPath = ""; projectRoot = ""; targets = (A00000000000000000000009); };
     A00000000000000000000011 = { isa = XCConfigurationList; buildConfigurations = (A00000000000000000000012, A00000000000000000000013); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
     A00000000000000000000012 = { isa = XCBuildConfiguration; buildSettings = { IPHONEOS_DEPLOYMENT_TARGET = 15.0; SDKROOT = iphoneos; }; name = Debug; };
